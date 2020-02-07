@@ -1,42 +1,75 @@
 .body {
   max-width: 1000px;
   margin: 10px auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
+  
 
-.carte3, .carte2, .carte1 {
+%cartes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 20px auto;
   padding: 40px;
   border-radius: 6px;
-  box-shadow: gray 0px 0px 4px 0px;
+  box-shadow: gray 0px 0px 5px;   
+  div{
+      h3{
+          font-weight: 700;
+      }
+      p{
+          font-weight: 400;
+      }
+      margin: 30px auto;
+  }
+  img{
+      width: 300px;
+      height: 245px;
+  } 
+  @media (max-width:375px){
+      grid-template-columns: 1fr;
+      
+  }
+  }
+  
+  
+ 
+.carte1 {   
+  
+  @extend %cartes;  
+  img {
+      margin-left: 184px;
+      @media (max-width:375px){
+          width: 100%;
+          margin-left: 0px;
+          }
+  }
 }
+.carte2 {
+  @extend %cartes;
+  img {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      @media (max-width:375px){
+          width: 100%;
+          grid-row: 2/3;
+         grid-column: 2/3;
+          }
+  }
+  div {
+      grid-column: 2/3;
+      grid-row: 1/2;
 
-.carte3 div, .carte2 div, .carte1 div {
-  margin: 30px auto;
+  }
+  
+ 
 }
-
-.carte3 div h3, .carte2 div h3, .carte1 div h3 {
-  font-weight: 700;
+.carte3 {
+  @extend %cartes;
+  img {
+      margin-left: 165px;
+      @media (max-width:375px){
+          width: 100%;
+          margin-left: 0px;
+          }
+  }
 }
-
-.carte3 div p, .carte2 div p, .carte1 div p {
-  font-weight: 400;
-}
-
-.carte3 img, .carte2 img, .carte1 img {
-  width: 300px;
-}
-
-.carte1 img {
-  margin-left: 184px;
-}
-
-.carte3 img {
-  margin-left: 165px;
-}
-
-/*# sourceMappingURL=body.css.map */
-
-/*# sourceMappingURL=body.scss.map */
