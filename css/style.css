@@ -29,7 +29,7 @@ header .nav button {
   border-radius: 50px;
   width: 170px;
   border: 1px;
-  box-shadow: 2px 2px 10px grey;
+  box-shadow: gray 0px 0px 5px;
 }
 header .div_header {
   display: grid;
@@ -66,7 +66,7 @@ header .div_header .part2 img {
 
 .body {
   max-width: 1000px;
-  margin: 10px auto;
+  margin: 50px auto;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -133,12 +133,6 @@ header .div_header .part2 img {
   }
 }
 
-body .free {
-  -webkit-box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 24px -9px rgba(0, 0, 0, 0.75);
-}
-
 body {
   margin: 0px;
 }
@@ -149,11 +143,12 @@ body .free {
   text-align: center;
   padding: 30px;
   position: absolute;
-  bottom: -82%;
+  bottom: -85%;
   right: 30%;
   left: 30%;
   z-index: 10;
   border-radius: 1em;
+  box-shadow: gray 0px 0px 5px;
 }
 body .free button {
   background-color: #ff52bf;
@@ -172,7 +167,7 @@ body footer {
   grid-gap: 20px;
   background-color: #00252e;
   color: white;
-  margin-top: 80px;
+  margin-top: 120px;
   padding: 20px;
   padding-top: 150px;
 }
@@ -222,32 +217,30 @@ body footer .copyright {
 
 @media only screen and (max-width: 750) {
   footer {
-    display: flex;
-    flex-direction: column;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
   }
   footer .contact {
-    flex-direction: column;
-    justify-self: center;
-  }
-  footer .contact .logo {
-    width: 200px;
-    margin-bottom: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
   footer .about {
-    flex-direction: column;
-    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
   footer .career {
-    flex-direction: column;
-    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
   }
   footer .social {
-    flex-direction: column;
-    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
   footer .copyright {
-    flex-direction: column;
-    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 5/6;
   }
 }
 
