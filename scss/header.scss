@@ -1,3 +1,7 @@
+$pink: hsl(322, 100%, 66%);
+$lBlue: hsl(193, 100%, 96%);
+$back:hsl(192, 100%, 9%);
+
 *{
     margin: 0px;
     padding: 0px;
@@ -6,7 +10,7 @@
 
 }
 @mixin btn {
-    background-color: hsl(322, 100%, 66%);
+    background-color:$pink;
             border-radius: 25px;
             padding: 10px;
             width: 200px;
@@ -16,7 +20,7 @@
 }
 header{
    background-image: url(images/bg-hero-desktop.svg);
-   background-color: hsl(193, 100%, 96%);
+   background-color:$lBlue;
     .nav{
         display: flex;
         height: 83px;
